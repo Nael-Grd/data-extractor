@@ -18,7 +18,7 @@ public class CSVDataMiner extends DataMiner {
     public File open() {
         File file = new File(this.path);
         if (!file.exists()) {
-            System.err.println("Erreur : Fichier non-existant");
+            System.err.println("Erreur : Fichier introuvable");
             return null;
         }
         this.file = file;

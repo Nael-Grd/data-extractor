@@ -21,7 +21,7 @@ public class PDFDataMiner extends DataMiner {
     public File open() {
         File file = new File(this.path);
         if (!file.exists()) {
-            System.err.println("Erreur : Fichier non-existant");
+            System.err.println("Erreur : Fichier introuvable");
             return null;
         }
         this.file = file;
@@ -32,7 +32,7 @@ public class PDFDataMiner extends DataMiner {
         this.parsed_file.clear();    // on vide la liste pour une nouvelle extraction
         try {
             pdf = Loader.loadPDF(this.file);
-            PDFTextStripper stripper = new PDFTextStripper();  // aspirateur a text
+            PDFTextStripper stripper = new PDFTextStripper();  // aspirateur a texte
             String text = stripper.getText(pdf);
             String[] lignes = text.split("\\r?\\n");
             for (String ligne : lignes) {
