@@ -1,1 +1,7 @@
 *.class
+*.app
+
+res/
+
+.DS_Store
+.vscode/*.class
